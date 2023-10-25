@@ -1,3 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 body {
-    background: #000;
+    height: 6800px;
+    background: linear-gradient(#188158, #0CA61F, #6DCB70, #81DC88, #A1DEAF);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header {
+	width: 100%;
+	padding-top: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	height: 50px;
+
+}
+
+.header_logo p {
+    color: #fff;
+    border-left: 3px solid #fff;   
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 30px;
+	padding-left: 10px;
+}
+
+.nav {
+	font-size: 16px;
+	text-transform: uppercase;
+	display: inline-block;
+	flex-direction: column;
+	justify-content:space-between;
+	align-items: center;
+	font-weight: 700;
+	padding-left: 200px;
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 15px;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	transition: color .1s linear;
+
+}
+
+.nav__link:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 3px;
+	opacity: 0;
+
+
+	background-color: #fff;
+
+	position: -webkit-sticky;
+
+    position: sticky;
+
+    top: 0;
+
+	left: 0;
+	z-index: 1;
+	transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+	color: #C0C0C0;
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+
+}
+
+.list-inline {
+    list-style: none;
+    margin-left: -3em;
+    margin-right: -0.5em;
+    padding: 0;
+  }
+  
+  .list-inline > li {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  .list-inline > li:before {
+    content: "\200B"; /* 1 */
+    position: absolute; /* 2 */
+  }
+
+.intro__inner h1{
+    color: #fff;
+}
+
+.human {
+    padding-top: 60px;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    width: 700px;
+    height: 130px;
+    font-size: 35px;
+    background: linear-gradient(#0CA61F, #6DCB70);
+    border: none;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 30px;
 }
