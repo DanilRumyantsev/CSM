@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 body {
     height: 6800px;
-    background: linear-gradient(#188158, #0CA61F, #6DCB70, #81DC88, #A1DEAF);
+    background: linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%), linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%);
     font-family: 'Montserrat', sans-serif;
 }
 
 .container {
 	width: 100%;
 	max-width: 1200px;
+    height: 100vh;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.container2 {
+	width: 100%;
+	max-width: 1200px;
+    height: 600px;
+	padding: 0 15px;
+	margin: 0 auto;
+    background:#09392D;
 }
 
 .intro {
@@ -39,8 +49,9 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-radius: 30px;
-	padding-left: 10px;
+	width: 100%;
+    border-radius: 30px;
+    background: url(../images/задний\ фон\ 2.jpg);
 }
 
 .nav {
@@ -50,6 +61,7 @@ body {
 	flex-direction: column;
 	justify-content:space-between;
 	align-items: center;
+    text-align: center;
 	font-weight: 700;
 	padding-left: 200px;
 }
@@ -62,7 +74,7 @@ body {
 	color: #fff;
 	text-decoration: none;
 	transition: color .1s linear;
-
+    padding-top: 15px;
 }
 
 .nav__link:after {
@@ -113,22 +125,50 @@ body {
     position: absolute; /* 2 */
   }
 
+.intro__inner {
+    display: block;
+}
+
 .intro__inner h1{
     color: #fff;
+    text-align: right;
+    font-size: 30px;
+    width: 50%;
+    float: right;
 }
 
 .human {
-    padding-top: 60px;
+    margin-top: 100px;
 }
 
 .button {
+    float: right;
     font-family: 'Montserrat', sans-serif;
-    width: 700px;
+    width: 450px;
     height: 130px;
     font-size: 35px;
-    background: linear-gradient(#0CA61F, #6DCB70);
+    border-radius: 20px;
+    background: linear-gradient(108deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.07) 100%);
+    backdrop-filter: blur(10px);
     border: none;
     font-weight: 700;
     color: #fff;
     border-radius: 30px;
+}
+
+.button:hover {
+    background: #fff;
+    color: #0CA61F;
+    transition: 1s;
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.button:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+}
+
+.container2 h1 {
+    width: 1000px;
 }
