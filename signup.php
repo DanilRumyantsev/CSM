@@ -63,6 +63,6 @@ if(isset($data['signup'])){
         email = email.replace(mask, "");
         emailInput.value = email;
     });
-    </script>aaaaAQ AA
+    </script>
 </body>
 </html>
