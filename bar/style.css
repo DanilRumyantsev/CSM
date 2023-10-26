@@ -1,0 +1,88 @@
+body{
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.input {
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    background-color: white;
+    cursor: text;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial; 
+}
+
+.btn1 {
+    font-size:100%;
+    position: absolute;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #102B32;
+    color: white;
+    border: 2px solid white; /* Green */
+    border-radius: 10px;
+    width: 260px;
+    height: 70px;
+    position: absolute;
+  }
+  
+  .btn1:hover {
+    background-color: #0df015; /* Green */
+    color: white;
+  }
+
+
+  label {
+    padding-right: 200px;
+    font-size: 1rem;
+  }
+  
+  .progress
+  {
+    width: 800px;
+    height: 80px;
+    font: 12px Arial, Tahoma, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress progress
+  {
+    position: absolute;
+    overflow: hidden;
+    left: -777px;
+  }
+  
+  .progress-bar
+  {
+    overflow: hidden;
+    background: #1eff00;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progress-value
+  {
+    color: #333;
+    display: block;
+    line-height: 21px;
+    text-align: center;
+  }
+  
+  .progress-bg
+  {
+    background: #ffffff;
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+
+

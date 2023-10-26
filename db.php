@@ -2,9 +2,9 @@
 require "libs/rb.php";
 
 R::setup('mysql:host=localhost;dbname=csm', 'root', ''); 
-
-function showError($error){
-    return array_shift($error);
+session_start();
+function showErrors($errors){
+    return array_shift($errors);
 }
 
 ?>
