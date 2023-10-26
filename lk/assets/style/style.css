@@ -348,9 +348,31 @@ main {
 
 .redact {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.elips {
+    position: absolute;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80px; 
+    height: 80px;
+    background: #06713B;
+    border-radius: 50%;
+}
+
+.elips:hover {
+    background-color: #09392D;
+    transition: 1s;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.elips:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
 }
 
 .avatar_full_name {
