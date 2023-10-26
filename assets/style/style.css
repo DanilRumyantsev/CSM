@@ -3,6 +3,7 @@ body {
     height: 6800px;
     background: linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%), linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%);
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
 }
 
 .container {
@@ -30,7 +31,6 @@ body {
 
 .header {
 	width: 100%;
-	padding-top: 30px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -132,21 +132,29 @@ body {
 .intro__inner h1{
     color: #fff;
     text-align: right;
-    font-size: 30px;
-    width: 50%;
-    float: right;
+    font-size: 20px;
+    width: 600px;
+    line-height: 3;
 }
 
-.human {
+.human{
+    display: flex;
+    justify-content: space-between;
     margin-top: 100px;
+    box-sizing: border-box;
 }
 
-.button {
-    float: right;
+.block2 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.btn {
     font-family: 'Montserrat', sans-serif;
     width: 450px;
-    height: 130px;
-    font-size: 35px;
+    height: 100px;
+    font-size: 30px;
     border-radius: 20px;
     background: linear-gradient(108deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.07) 100%);
     backdrop-filter: blur(10px);
@@ -156,19 +164,77 @@ body {
     border-radius: 30px;
 }
 
-.button:hover {
-    background: #fff;
+.btn-cont {
+    padding-left: 150px;
+    padding-top: 150px;
+}
+
+.btn:hover {
+    background-color: #fff;
     color: #0CA61F;
     transition: 1s;
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.button:active {
+.btn:active {
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
     box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
 }
 
 .container2 h1 {
     width: 1000px;
+}
+
+.background {
+    background-color: #09392D;
+    height: 600px;
+    width: 100%;
+}
+
+.text-c {
+    color: #fff;
+    font-size: 18px;
+    padding-top: 40px;
+    line-height: 2.5;
+    width: 500px;
+}
+
+.text-c1 {
+    font-size: 16px;
+    color: #fff;
+    padding-top: 40px;
+    margin-bottom: 150px;
+    line-height: 2.5;
+}
+
+.btn2 {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: #102B32;
+    width: 300px;
+    height: 90px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    float: left;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
+    transition: 1s;
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.btn:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+}
+
+.img-cont {
+    padding-left: -300px;
 }
