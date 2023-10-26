@@ -3,7 +3,7 @@ body {
     background: linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%), linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%);
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    height: 6800px;
+    height: 1800px;
     overflow-x: hidden;
 }
 
@@ -17,12 +17,13 @@ body {
 }
 
 .container2 {
+    display: flex;
+    justify-content: space-between;
 	width: 100%;
 	max-width: 1200px;
-    height: 600px;
+    height: 300px;
 	padding: 0 15px;
 	margin: 0 auto;
-    background:#09392D;
 }
 
 .intro {
@@ -315,16 +316,14 @@ main {
 }
 
 .input {
-    color: initial;
+    color: #000;
     display: inline-block;
     text-align: start;
-    background-color: white;
     cursor: text;
-    font: 400 13.3333px Arial;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     padding: 1px 0px;
     border-width: 2px;
-    border-style: inset;
-    border-color: initial; 
     top:370px;
     left:600px;
 }
@@ -384,4 +383,88 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+progress {
+    width: 800px;
+    height: 80px;
+}
+
+.input input {
+    margin-top: 150px;
+    width: 70%;
+    height: 100px;
+    margin-left: 80px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 30px;
+}
+
+.inp_but {
+    margin-top: 30px;
+    margin-left: 220px;
+    border-radius: 30px;
+}
+
+.shai {
+    margin-top: -8px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 35%;
+    margin-bottom: 100px;
+}
+
+.bg_qr {
+    width: 500px;
+    height: 700px;
+    background: #09392D;
+    border-radius: 30px;
+}
+
+.bg_inp {
+    width: 500px;
+    height: 700px;
+    background: #09392D;
+    border-radius: 30px;
+}
+
+.bg_inp h1 {
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+}
+
+.bg_qr h1 {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.bg_qr img {
+    width: 100%;
+}
+
+.qr_code {
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+}
+
+.qr-con {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.progress_div {
+    margin-left: 20%;
+}
+
+.counter {
+    color: #fff;
+    font-weight: 700;
+}
+
+.down {
+    display: block;
+    bottom: 0;
 }

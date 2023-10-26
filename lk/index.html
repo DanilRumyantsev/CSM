@@ -7,6 +7,7 @@
     <title>Личный кабинет</title>
 </head>
 <body>
+
     <!-- Navigation-->
 
     <header class='header'>
@@ -29,55 +30,128 @@
             </div>
     </header>
 
-    <div class="avatar">
-        <div class="avatar_image">
-            <img class="image_ava" src="./assets/images/avatar_image.svg">
-            <div class="center">ИИ</div>
-            <div class="elips">
-                <img class="redact" src="./assets/images/pencil.svg">
+    <div class="container">
+        <div class="avatar">
+            <div class="avatar_image">
+                <img class="image_ava" src="./assets/images/avatar_image.svg">
+                <div class="center">ИИ</div>
+                <div class="elips">
+                    <img class="redact" src="./assets/images/pencil.svg">
+                </div>
             </div>
         </div>
-        <div class="avatar_full_name"><h1>Иван<br> Иванов</h1></div>
+        <div class="avatar_full_name">
+            <h1>Иван<br> Иванов</h1>
+        </div>
     </div>
-    
-    <div class="input">
-        <input type="text" class="inputHours" id="inputpromo">      
-        <button id="as">click</button>
+    <div class="progress_div">
+        <div class="counter" id="counter"></div>
+        <progress class="progress" id="file" max="100" value="0"></progress>
+        <p class ="shai" id="shai">0%</p>
     </div>
 
-    <progress class="progress" id="file" max="100" value="0"></progress>
+    <div class="container2">
 
-    <div id="counter"></div>
+        <div class="bg_qr">
+            <h1>Отсканируйте <br>QR-code</h1>
+            <div><img src="./assets/images/qr-scan.svg"></div>
+            <div class="qr-con">
+                <input class="qr_code" type="file" accept="image/*" id="qr-input">
+            </div>
+            <div id="qr-result"></div>
+        </div>
 
-    <script>    
-        let promoCode = "3F1C-4FMD-KK3L-42BC";
-        let promoPoints = 0;             
+        <div class="bg_inp">
+            <h1>Введите код и <br>получите бонусы</h1>
+            <div class="input">
+                <input type="text" class="inputHours" id="inputpromo">      
+                <button class="inp_but" id="as">Получить</button>
+            </div>
+        </div>
+    </div>
 
-        let btn = document.getElementById("as");
-        let progressBar = document.getElementById("file");
-        let counterElement = document.getElementById("counter");
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script>
+        let promoCodes = [
+            "2SYFV00SJ44B",
+            "LWW7IMKGAQAN",
+            "KU7Q8HJ6YA5K",
+            "JJ5I3MX5NVXP",
+            "5PZ0Z73L6P6I",
+            "IECO3QHB1O8F",
+            "CR2IID8ANN5L",
+            "1CK6TWSN0KCL",
+            "ZB3X4M498ND9",
+            "F0ZHS7TK2OF3",
+            "5EQ4EGPIVI0N",
+            "UU85CGYYKA0P"
+        ];
+        let promoPoints = 0;
+        let counter = 0;
+        let activatedPromoCodes = []; // Массив активированных промокодов
 
-        btn.onclick = function(){
+        const qrInput = document.getElementById("qr-input");
+        const qrResult = document.getElementById("qr-result");
+        const btn = document.getElementById("as");
+        const progressBar = document.getElementById("file");
+        const counterElement = document.getElementById("counter");
+
+        qrInput.addEventListener("change", handleQRCode);
+        btn.addEventListener("click", handleButtonClick);
+
+        function handleQRCode(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const dataUrl = event.target.result;
+                const image = new Image();
+                image.src = dataUrl;
+
+                image.onload = function () {
+                    const canvas = document.createElement("canvas");
+                    const context = canvas.getContext("2d");
+                    canvas.width = image.width;
+                    canvas.height = image.height;
+                    context.drawImage(image, 0, 0, image.width, image.height);
+
+                    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                    const code = jsQR(imageData.data, imageData.width, imageData.height);
+
+                    if (code) {
+                        qrResult.innerText = code.data;
+                        activatePromoCode(code.data);
+                    } else {
+                        qrResult.innerText = "QR code not found";
+                    }
+                };
+            };
+
+            reader.readAsDataURL(file);
+        }
+        function handleButtonClick() {
             let input = document.getElementById("inputpromo").value;
+            let huina = document.getElementById("shai");
             
-            if (input === promoCode) {
+            if (activatedPromoCodes.includes(input)) {
+                alert("Промокод уже активирован! Ошибка.");
+            } else if (promoCodes.includes(input)) {
                 promoPoints += 10; // Накапливаем promoPoints
                 alert("Промокод верный! Начислено 10 очков.");
-                
-                if (promoPoints > 100) {
-                    promoPoints = 0; // Обнуляем promoPoints
+                huina.innerText = (promoPoints + "%")
+                if (promoPoints >= 100) { promoPoints = 0; // Обнуляем promoPoints
                     counter++; // Увеличиваем счетчик
                     alert("Вы повысили уровень");
                 }
 
-                // Обновление значения прогресс-бара
-                progressBar.value = promoPoints;
+                activatedPromoCodes.push(input); // Добавляем активированный промокод в массив
             } else {
                 alert("Промокод неверный! Ошибка.");
             }
-            
+
             counterElement.textContent = "Ваш уровень: " + counter;
-        };
+            progressBar.value = promoPoints; // Обновление значения прогресс-бара
+        }
     </script>
 
 </body>
