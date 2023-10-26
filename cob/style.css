@@ -1,0 +1,247 @@
+body{
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.input {
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    background-color: white;
+    cursor: text;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial; 
+    position: absolute;
+    top:370px;
+    left:600px;
+}
+
+
+  .progress
+  {
+    margin-left: 0px;
+    margin-top: 100px;
+    width: 800px;
+    height: 80px;
+    font: 12px Arial, Tahoma, sans-serif;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  .progress progress
+  {
+    position: absolute;
+    overflow: hidden;
+
+  }
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    height: 6800px;
+    background: linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%), linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%);
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+    height: 100vh;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.container2 {
+	width: 100%;
+	max-width: 1200px;
+    height: 600px;
+	padding: 0 15px;
+	margin: 0 auto;
+    background:#09392D;
+}
+
+
+
+
+
+
+
+
+.block2 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+.btn:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+}
+
+
+.logoBank{
+left:-18px;
+top:10px;
+position:absolute;
+}
+
+.account{
+right: -160px;
+position: absolute;
+}
+
+.progress{
+top:-400px;
+left:350px;
+}
+
+.Polygon{
+    position: absolute;
+    top:100px;
+    left:650px;
+    height: 200px;
+    width: 200px;
+}
+.textName{
+    position:absolute;
+    top:120px;
+    left:705px;
+    font-size:52px;
+    color: white;
+
+}
+
+
+body {
+    background: rgb(107, 216, 97); 
+  }
+  h4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-weight: 200;
+    opacity: 1;
+      font-family: sans-serif;
+    color: #fff;
+  }
+  #loader {
+    animation: animate 1.5s linear infinite;
+    clip: rect(0, 80px, 80px, 40px); 
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+  }
+  @keyframes animate {
+    0% { 
+      transform: rotate(0deg)
+    }
+    100% { 
+      transform: rotate(220deg)
+    }
+  }
+  #loader:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    content:'';
+    border-radius: 50%; 
+    height: 80px;
+    width: 80px;
+    position: absolute; 
+  } 
+  @keyframes animate2 {
+    0% {
+      box-shadow: inset #fff 0 0 0 17px;
+      transform: rotate(-140deg);
+    }
+    50% {
+      box-shadow: inset #fff 0 0 0 2px;
+    }
+    100% {
+      box-shadow: inset #fff 0 0 0 17px;
+      transform: rotate(140deg);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
