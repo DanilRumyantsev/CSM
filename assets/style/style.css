@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 body {
-    height: 6800px;
     background: linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%), linear-gradient(170deg, #188158 1.6%, #0CA61F 36.21%, #59E05D 58.24%, #69FF75 79.19%, #85F69F 92.23%);
     font-family: 'Montserrat', sans-serif;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -24,6 +24,7 @@ body {
 }
 
 .intro {
+    padding-top: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -50,8 +51,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-    border-radius: 30px;
-    background: url(../images/задний\ фон\ 2.jpg);
+    background: url(../images/back.svg);
 }
 
 .nav {
@@ -151,6 +151,7 @@ body {
 }
 
 .btn {
+    z-index: 9999;
     font-family: 'Montserrat', sans-serif;
     width: 450px;
     height: 100px;
@@ -165,11 +166,13 @@ body {
 }
 
 .btn-cont {
+    z-index: 9999;
     padding-left: 150px;
     padding-top: 150px;
 }
 
 .btn:hover {
+    z-index: 9999;
     background-color: #fff;
     color: #0CA61F;
     transition: 1s;
@@ -178,6 +181,7 @@ body {
 }
 
 .btn:active {
+    z-index: 9999;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
     box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
 }
@@ -221,20 +225,89 @@ body {
     float: left;
 }
 
-.btn:hover {
+.btn2:hover {
     background-color: #fff;
     border-color: #000;
-    color: #000;
+    color: #102B32;
     transition: 1s;
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.btn:active {
+.btn2:active {
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
     box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
 }
 
 .img-cont {
     padding-left: -300px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.texth {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 14px;
+    width: 350px;
+    color: #fff;
+    margin-right: 120px;
+}
+
+.man {
+    margin-right: -70px;
+}
+
+main {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.map {
+    text-align: center;
+    color: #FFF;
+}
+
+.page-title {
+    background: #0000004c;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn3 {
+    position: relative;
+    left: 33%;
+    font-family: 'Montserrat', sans-serif;
+    width: 450px;
+    height: 100px;
+    font-size: 30px;
+    border-radius: 20px;
+    background: #188158;
+    backdrop-filter: blur(10px);
+    border: none;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 30px;
+    margin-bottom: 100px;
+}
+
+.btn3:hover {
+    background-color: #fff;
+    color: #188158;
+    transition: 1s;
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.btn3:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1)inset;
+}
+
+.map {
+    background-color: #0000004c;
+    margin-bottom: 0;
 }
